@@ -1,0 +1,21 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ title }} - Encyclopedia 
+{% endblock %}
+
+{% block body %}
+  {% if messages %}
+    {% for message in messages %}
+    <div {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}  role="alert">
+      <p>{{ message }}</p>
+    </div>
+  {% endfor %}
+  {% endif %}
+
+    {{ entry | safe }}
+
+    <p class="my-5"><a class="btn btn-outline-dark" href="{% url 'edit_entry' title=title%}">Edit</a></p>
+
+
+{% endblock %}

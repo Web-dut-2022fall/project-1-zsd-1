@@ -5,12 +5,28 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Pages</h1>
+  {% if messages %}
+    {% for message in messages %}
+    <div {% if message.tags %} class="alert alert-{{ message.tags }}" {% endif %}  role="alert">
+      <p>{{ message }}</p>
+    </div>
+  {% endfor %}
+  {% endif %}
 
-    <ul>
+  
+    <h1>{{ title }}</h1>
+
+    <div class="row">
         {% for entry in entries %}
-            <li>{{ entry }}</li>
+          <div class="col-sm-12 col-md-6 mb-2">
+            <div class="card">
+            <div class="card-body">
+            <i class="fas fa-file mr-3"></i><a href="/wiki/{{ entry }}">{{ entry }}</a>
+          </div>
+          </div>
+        </div>
+
         {% endfor %}
-    </ul>
+    </div>
 
 {% endblock %}

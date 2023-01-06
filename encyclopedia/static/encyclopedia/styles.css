@@ -1,26 +1,30 @@
 body {
-    margin: 0;
+    /*margin: 0;*/
     background-color: white;
+    font-size: 16px;
+}
+
+h1, h2, h3{
+    font-family: "Alata";
+    font-weight: 500;
+}
+
+p, a, li, input, textarea, label{
+    font-family: "Alata";
+    font-weight: 400;
 }
 
 code {
     white-space: pre;
 }
 
-h1 {
-    margin-top: 0px;
-    padding-top: 20px;
+
+.row{
+    margin-left: 0!important;
+    margin-right: 0!important;
 }
 
-textarea {
-    height: 90vh;
-    width: 80%;
-}
-
-.main {
-    padding: 10px;
-}
-
+/* SIDEBAR */
 .search {
     width: 100%;
     font-size: 15px;
@@ -28,11 +32,51 @@ textarea {
 }
 
 .sidebar {
-    background-color: #f0f0f0;
     height: 100vh;
     padding: 20px;
+    background-color: #101B3B;
+    color: #fff;
 }
 
 .sidebar h2 {
     margin-top: 5px;
 }
+
+.sidebar a{
+    color: #fff!important;
+}
+
+
+.sidebar textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+
+/* MAIN */
+
+.main {
+    padding-top: 0.5em;
+}
+
+.main h1{
+    color: #101B3B;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    margin-bottom: 1em!important;
+}
+
+.main input{
+    width: 50%;
+    }
+.main textarea{
+    width: 90%;
+    height: 10em!important;
+}
+
+.main .card .card-body a{
+    color: #101B3B!important;
+
+}
+
+
